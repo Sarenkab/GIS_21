@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Http = require("http");
 const Mongo = require("mongodb");
-let port = Number(process.env.Port);
+let port = Number(process.env.PORT);
 let databaseUrl = "mongodb+srv://testtest:CoolCool@cluster0.xr9bo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 let credentialsCollection;
 let rezeptCollection;

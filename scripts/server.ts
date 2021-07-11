@@ -1,7 +1,7 @@
 import * as Http from "http";
 import * as Mongo from "mongodb";
 
-let port: number = Number (process.env.Port);
+let port: number = Number (process.env.PORT);
 let databaseUrl: string = "mongodb+srv://testtest:CoolCool@cluster0.xr9bo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 let credentialsCollection: Mongo.Collection;
 let rezeptCollection: Mongo.Collection;
