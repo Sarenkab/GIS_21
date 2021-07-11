@@ -24,4 +24,4 @@ async function generatePersonalRezepte() {
         });
     });
 }
-//# sourceMappingURL=meineRezepte.js.map
+//# sourceMappingURL=meinerezepte.js.map

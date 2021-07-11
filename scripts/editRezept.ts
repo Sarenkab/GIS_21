@@ -31,7 +31,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     });
     let responseJSON: any = await response.json();
     if (responseJSON.successful_updated === true) {
-        window.location.pathname = "GIS_21/sites/meineRezepte.html";
+        window.location.pathname = "GIS_21/sites/meinerezepte.html";
     } else {
         alert("Update didnt work");
     }

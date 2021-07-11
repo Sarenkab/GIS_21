@@ -2,7 +2,7 @@
 let einloggenButton = document.getElementById("submit");
 einloggenButton.addEventListener("click", () => {
     login();
-    window.location.pathname = "sites/hauptseite.html";
+    window.location.pathname = "GIS_21/sites/hauptseite.html";
 });
 function login() {
     let emailInput = document.getElementById("email");

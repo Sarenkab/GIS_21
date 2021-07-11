@@ -25,6 +25,6 @@ document.getElementById("submit").addEventListener("click", async () => {
         method: "POST",
         body: rezeptJSON // body data type must match "Content-Type" header
     });
-    window.location.pathname = "GIS_21/sites/meineRezepte.html";
+    window.location.pathname = "GIS_21/sites/meinerezepte.html";
 });
 //# sourceMappingURL=neuesRezept.js.map

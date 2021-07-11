@@ -2,7 +2,7 @@ let einloggenButton: HTMLButtonElement = <HTMLButtonElement> document.getElement
 
 einloggenButton.addEventListener("click", () => {
     login();
-    window.location.pathname = "sites/hauptseite.html";
+    window.location.pathname = "GIS_21/sites/hauptseite.html";
 });
 
 function login(): void {
