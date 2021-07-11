@@ -17,12 +17,12 @@ async function isLoggedIn() {
     console.log(responseJson.loggedIn);
     if (!responseJson.loggedIn) {
         alert("Your credentails dont match.");
-        window.location.pathname = "sites/login.html";
+        window.location.pathname = "GIS_21/sites/login.html";
     }
 }
 function logout() {
     localStorage.clear();
-    window.location.pathname = "sites/login.html";
+    window.location.pathname = "GIS_21/sites/login.html";
 }
 function bundleRezept() {
     let titelInput = document.getElementById("titel");

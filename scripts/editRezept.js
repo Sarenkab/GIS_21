@@ -28,7 +28,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     });
     let responseJSON = await response.json();
     if (responseJSON.successful_updated === true) {
-        window.location.pathname = "/sites/meineRezepte.html";
+        window.location.pathname = "GIS_21/sites/meineRezepte.html";
     }
     else {
         alert("Update didnt work");
