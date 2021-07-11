@@ -9,7 +9,7 @@ async function isLoggedIn() {
         password: localStorage.getItem("password")
     };
     let credentials = JSON.stringify(data);
-    let response = await fetch("http://localhost:8100/login", {
+    let response = await fetch("https://sarenkahasanewapp.herokuapp.com/login", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });

@@ -23,7 +23,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     let rezept: Rezept = bundleRezept();
     rezept.likedBy = [];
     let rezeptJSON: string = JSON.stringify(rezept);
-    await fetch("http://localhost:8100/rezept/create", {
+    await fetch("https://sarenkahasanewapp.herokuapp.com/rezept/create", {
         method: "POST",
         body: rezeptJSON // body data type must match "Content-Type" header
     });

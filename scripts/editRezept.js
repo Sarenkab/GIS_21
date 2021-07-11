@@ -22,7 +22,7 @@ document.getElementById("submit").addEventListener("click", async () => {
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
     let rezeptJSON = JSON.stringify(bundleRezept());
-    let response = await fetch(`http://localhost:8100/rezept/update?id=${id}`, {
+    let response = await fetch(`https://sarenkahasanewapp.herokuapp.com/rezept/update?id=${id}`, {
         method: "POST",
         body: rezeptJSON // body data type must match "Content-Type" header
     });
@@ -37,7 +37,7 @@ document.getElementById("submit").addEventListener("click", async () => {
 async function fillRezeptIn() {
     let urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
-    let response = await fetch(`http://localhost:8100/rezept?id=${id}`);
+    let response = await fetch(`https://sarenkahasanewapp.herokuapp.com/rezept?id=${id}`);
     let rezept = await response.json();
     let titelInput = document.getElementById("titel");
     titelInput.value = rezept.titel;

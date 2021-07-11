@@ -13,7 +13,7 @@ async function regestrieren(): Promise<void> {
       password: passwordInput.value.trim()
     };
     let credentials: string = JSON.stringify(data);
-    let response: Response = await fetch("http://localhost:8100/regestrierung", {
+    let response: Response = await fetch("https://sarenkahasanewapp.herokuapp.com/regestrierung", {
         method: "POST",
         body: credentials // body data type must match "Content-Type" header
     });

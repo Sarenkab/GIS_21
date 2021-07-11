@@ -70,6 +70,8 @@ async function handleRequest (req: Http.IncomingMessage, res: Http.ServerRespons
 }
 
 function handleLogin(req: Http.IncomingMessage, res: Http.ServerResponse): void {
+    res.setHeader("Access-Control-Allow-Headers", "content-type");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     let data: string = "";
     req.on("data", chunk => {
         data += chunk.toString();

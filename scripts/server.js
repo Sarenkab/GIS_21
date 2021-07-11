@@ -69,6 +69,8 @@ async function handleRequest(req, res) {
     }
 }
 function handleLogin(req, res) {
+    res.setHeader("Access-Control-Allow-Headers", "content-type");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     let data = "";
     req.on("data", chunk => {
         data += chunk.toString();

@@ -1,7 +1,7 @@
 "use strict";
 generatePersonalRezepte();
 async function generatePersonalRezepte() {
-    let response = await fetch(`http://localhost:8100/rezepte?author=${localStorage.getItem("email")}`);
+    let response = await fetch(`https://sarenkahasanewapp.herokuapp.com/rezepte?author=${localStorage.getItem("email")}`);
     let rezepte = await response.json();
     rezepte.forEach((rezept) => {
         let rezepteContainer = document.getElementById("alleRezepte");
@@ -19,7 +19,7 @@ async function generatePersonalRezepte() {
         rezepteContainer.append(rezeptContainer);
         let button = rezepteContainer.getElementsByClassName("delete")[0];
         button.addEventListener("click", async () => {
-            await fetch(`http://localhost:8100/rezept/delete?id=${rezept._id}`);
+            await fetch(`https://sarenkahasanewapp.herokuapp.com/rezept/delete?id=${rezept._id}`);
             window.location.reload();
         });
     });

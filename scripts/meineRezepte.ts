@@ -1,6 +1,6 @@
 generatePersonalRezepte();
 async function generatePersonalRezepte(): Promise<void> {
-    let response: Response = await fetch(`http://localhost:8100/rezepte?author=${localStorage.getItem("email")}`);
+    let response: Response = await fetch(`https://sarenkahasanewapp.herokuapp.com/rezepte?author=${localStorage.getItem("email")}`);
     let rezepte: Rezept[] = await response.json();
     rezepte.forEach((rezept: Rezept) => {
         let rezepteContainer: HTMLDivElement = <HTMLDivElement>document.getElementById("alleRezepte");
@@ -18,7 +18,7 @@ async function generatePersonalRezepte(): Promise<void> {
         rezepteContainer.append(rezeptContainer);
         let button: HTMLButtonElement = <HTMLButtonElement>rezepteContainer.getElementsByClassName("delete")[0];
         button.addEventListener("click", async () => {
-            await fetch(`http://localhost:8100/rezept/delete?id=${rezept._id}`);
+            await fetch(`https://sarenkahasanewapp.herokuapp.com/rezept/delete?id=${rezept._id}`);
             window.location.reload();
         });
     });
