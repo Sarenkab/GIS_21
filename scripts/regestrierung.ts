@@ -21,7 +21,7 @@ async function regestrieren(): Promise<void> {
     console.log(responseJson.registered);
     if(responseJson.registered){
       
-      window.location.pathname = "sites/login.html";
+      window.location.pathname = "GIS_21/sites/login.html";
     } else {
       alert("This email is already registered");
     }
